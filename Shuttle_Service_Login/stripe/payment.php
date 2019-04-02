@@ -17,7 +17,7 @@ $charge = \Stripe\Charge::create([
   ]);
 
 if ($charge["paid"] === TRUE) {
-    header("Location: payment-success.php");    
+    header("Location: home.php");
 }
   
 //   echo "Retrieveing paid status: ";
