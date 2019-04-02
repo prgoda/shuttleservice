@@ -18,7 +18,7 @@ $_SESSION['organo'] = $organo;
 
 $output = [
     "ParticipantID"=>(int)$bookingid,
-  "BookingID"=>(int)$participantid
+    "BookingID"=>(int)$participantid
 
 ];
 

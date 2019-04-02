@@ -49,5 +49,5 @@ $result = curl_exec($ch);
 //close cURL resource
 curl_close($ch);
 
-header("Location: payment-view.php");
+header("Location: stripe/payment-view.php");
 exit();

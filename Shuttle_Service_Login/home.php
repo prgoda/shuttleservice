@@ -44,7 +44,7 @@ $data = json_decode($json, TRUE);
 
 // as the data is wrapped in an array with 1 element Book, we have to extract
 // the Book, in order to get the list of Books
-$bookingList= $data['Booking'];?></h1>
+$bookingList= $data['Get_booking'];?></h1>
 
 <a href="selectcourts.php">Create Booking</a>
 
@@ -71,7 +71,7 @@ $bookingList= $data['Booking'];?></h1>
                   <td>'                             . $book['startT'] . '</td>
                   <td>'                             . $book['courtid']  . '</td>
                   <td>'                             . $book['Location']  . '</td>    
-                  <td>'                             . $book['Status']  . '
+                  <td>'                             . $book['Status']  . '</td> 
                   <td>'                             . $book['Curr_Availability']  . '</td>
                   <td>'                             . $book['Max_Availability']  . '</td> 
                   <td><a href="add_participant.php?bookingid=' . $book['id'] . '">Join</a></td>

@@ -15,11 +15,14 @@ $json = file_get_contents($serviceURL);
 // looping etc
 $data = json_decode($json, TRUE);
 
-print_r($data);
 
 // as the data is wrapped in an array with 1 element Book, we have to extract
 // the Book, in order to get the list of Books
 $courtList= $data['court'];
+
+if(!isset($_SESSION['courterror'])){
+    echo $_SESSION['courterror'];
+}
 
 ?>
 
