@@ -33,7 +33,18 @@ if($data['name']==''){
 if(isset($data['name'])){
     echo "Hello ".$data['name'];
 }
-?></h1>
+$serviceURL = "";
+
+// Service invocation via GET
+$json = file_get_contents($serviceURL);
+
+// parsing the String in JSON format to objects so we can manipulate it by
+// looping etc
+$data = json_decode($json, TRUE);
+
+// as the data is wrapped in an array with 1 element Book, we have to extract
+// the Book, in order to get the list of Books
+$bookingList= $data['Booking'];?></h1>
 
 <a href="selectcourts.php">Create Booking</a>
 

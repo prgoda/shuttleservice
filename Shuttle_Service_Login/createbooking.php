@@ -20,13 +20,9 @@ session_start();
 
     User ID: <input type="hidden" name="userid" value="<?php echo $_SESSION['userData']['id'] ?> "><br>
 
-    Date: <input type="text" name="date" value=""><br>
+    Date: <input type="text" name="date" value="<?php echo $_SESSION['date'] ?> "><br>
 
     Start Time: <input type="text" name="starttime" value=""><br>
-
-    End Time: <input type="text" name="endtime" value=""><br>
-
-    Phone: <input type="text" name="phone" value=""><br>
 
     <input type="submit">
 
@@ -38,3 +34,7 @@ session_start();
 
 </body>
 </html>
+
+http://LIHUA:8082/booking
+
+user id date time location status max avail and current 
