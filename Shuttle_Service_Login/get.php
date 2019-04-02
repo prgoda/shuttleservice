@@ -35,5 +35,5 @@ $result = curl_exec($ch);
 curl_close($ch);
 
 header("Location: home.php");
-	exit();
+exit();
 ?>

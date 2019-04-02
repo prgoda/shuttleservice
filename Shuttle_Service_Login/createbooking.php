@@ -22,7 +22,17 @@ session_start();
 
     Date: <input type="text" name="date" value="<?php echo $_SESSION['date'] ?> "><br>
 
-    Start Time: <input type="text" name="starttime" value=""><br>
+    Court: <input type="text" name="court" value="<?php echo $_SESSION['court'] ?> "><br>
+
+    Start Time: <input type="text" name="starttime" value="<?php echo $_SESSION['time'] ?> "><br>
+
+    Location:  <input type="text" name="location" value="<?php echo $_SESSION['location'] ?> "><br>
+
+    Status:  <input type="hidden" name="status" value="Available"><br>
+
+    Max Availablity:  <input type="text" name="maxno" value=""><br>
+
+    Current Availablity:  <input type="text" name="currno" value=""><br>
 
     <input type="submit">
 
@@ -36,5 +46,3 @@ session_start();
 </html>
 
 http://LIHUA:8082/booking
-
-user id date time location status max avail and current 

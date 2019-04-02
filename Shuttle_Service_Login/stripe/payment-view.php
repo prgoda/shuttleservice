@@ -10,7 +10,7 @@
                         Amount:
                     </td>
                     <td>
-                        <input type='number' name='amount' value='400'/>
+                        <input type='number' name='amount' value='<?php  $price = 400*(int)$_SESSION['organo']; echo $price?>'/>
                     </td>
                 </tr>
                 <tr>

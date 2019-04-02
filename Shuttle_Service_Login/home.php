@@ -33,7 +33,7 @@ if($data['name']==''){
 if(isset($data['name'])){
     echo "Hello ".$data['name'];
 }
-$serviceURL = "";
+$serviceURL = "http://LIHUA:8082/bookings";
 
 // Service invocation via GET
 $json = file_get_contents($serviceURL);
@@ -50,14 +50,37 @@ $bookingList= $data['Booking'];?></h1>
 
 
 <h2>Current Games</h2>
-<table>
-    <tr>
-        <th>Location</th>
-        <th>Date</th>
-        <th>Location</th>
-        <th>Action</th>
-    </tr>
-</table>
+<div class="col-md-6">
+    <table class='table table-striped' id='book-list' border='1'>
+        <tr>
+            <th>Date</th>
+            <th>Start Time</th>
+            <th>Court No</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Current Availabilityn</th>
+            <th>Max Availability</th>
+            <th>Join</th>
+        </tr>
+        <?php
+
+        foreach($bookingList as $book) {
+            echo '
+              <tr>
+                  <td>'                             . $book['Date']  . '</td>
+                  <td>'                             . $book['startT'] . '</td>
+                  <td>'                             . $book['courtid']  . '</td>
+                  <td>'                             . $book['Location']  . '</td>    
+                  <td>'                             . $book['Status']  . '
+                  <td>'                             . $book['Curr_Availability']  . '</td>
+                  <td>'                             . $book['Max_Availability']  . '</td> 
+                  <td><a href="add_participant.php?bookingid=' . $book['id'] . '">Join</a></td>
+              </tr>
+            ';
+
+        } // foreach
+        ?>
+    </table>
 
 
 
